@@ -21,3 +21,8 @@ export const postData = (data: {
 }) => {
     return axios.post(ENV + "posts", data);
 }
+
+// Fungsi untuk mengambil komentar berdasarkan ID Post
+export const getPostComments = (id: number) => {
+    return axios.get(ENV + "posts/" + id + "/comments");
+}
